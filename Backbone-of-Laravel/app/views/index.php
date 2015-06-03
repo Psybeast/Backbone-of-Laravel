@@ -1,16 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-	<meta charset="UTF-8">
-	<title>Backbone-ofLaravel</title>
+    <meta charset="UTF-8">
+    <title>Backbone-ofLaravel</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-	<div class="welcome">
-		<h1>You have arrived.</h1>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.0/backbone-min.js"></script>
-	<script src=""></script>
+<div class="welcome">
+    <h1>You have arrived.</h1>
+</div>
+<main></main>
+<script type="text/template" id="plineTemplate">
+    <img src="<%= pPic %>"/>
+    <p class="pLineName"><%= pLine %></p>
+</script>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/backbone-min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/code.js"></script>
+<script> new App.Views.App</script>
 </body>
 </html>

@@ -12,7 +12,11 @@ class CreateTable extends Migration {
 	 */
 	public function up()
 	{
-		//
+        Schema::create('pLine', function ($table) {
+            $table->increments('id');
+            $table->string('pLine');
+            $table->string('pPic');
+        });
 	}
 
 	/**
@@ -22,7 +26,7 @@ class CreateTable extends Migration {
 	 */
 	public function down()
 	{
-		//
+        Schema::drop('pLine');
 	}
 
 }

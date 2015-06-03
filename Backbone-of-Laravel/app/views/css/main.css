@@ -1,0 +1,38 @@
+
+.productLineSelector {
+    position: relative;
+    width: 620px;
+    height: 120px;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #777;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+.pLineLi {
+    display: inline-block;
+    list-style: none;
+    /*width: 120px;*/
+    /*height: 120px;*/
+    margin: 0 auto;
+
+    opacity: 1;
+}
+
+.pLineLi:hover {
+    opacity: 0.7;
+}
+
+.pLineLi img {
+    width: 100px;
+    height: 70px;
+    position: relative;
+    margin: 10px;
+}
+
+.pLineName {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
