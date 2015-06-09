@@ -5,6 +5,12 @@ App.Models.PLine = Backbone.Model.extend({
         pPic: 'na'
     }
 });
+
+App.Models.DefaultView = Backbone.Model.extend({
+    defaults: {
+        title: 'defaultView'
+    }
+});
 //ProductLine View
 App.Views.PLine = Backbone.View.extend({
     tagName: 'li',
@@ -49,7 +55,32 @@ App.Views.PLineCollectionView = Backbone.View.extend({
 
     }
 });
+//DefoView
+App.Views.DefaultView = Backbone.View.extend({
 
+    template: _.template($("#defoTemplate").html()),
+
+    tagName: 'div',
+
+    events: {
+        'click .fourtab li': 'clicky'
+
+    },
+
+    initialize: function () {
+        this.model.on('change', this.render, this);
+    },
+
+    clicky: function (e) {
+        e.preventDefault();
+        alert('click');
+    },
+
+    render: function () {
+        this.$el.html(this.template(this.model.toJSON()));
+        return this;
+    }
+});
 
 /*
  var mod = new App.Models.PLine({pLine: 'P-Line', pPic: 'css/img/eline.jpg'});
@@ -67,7 +98,10 @@ App.Views.App = Backbone.View.extend({
         pLineCollection.add({pLine: 'Videowall', pPic: 'css/img/vwall.jpg'});
         pLineCollection.add({pLine: 'Multi-touch', pPic: 'css/img/mtouch.jpg'});
         var pLineCollectionView = new App.Views.PLineCollectionView({collection: pLineCollection}).render();
-        $('main').append(pLineCollectionView.$el);
+        var defo = new App.Models.DefaultView();
+        var defoView = new App.Views.DefaultView({model: defo}).render();
+        $('.productLineSelector').append(pLineCollectionView.$el);
+        $('.defoView').append(defoView.el);
     }
 
 });
