@@ -5,7 +5,11 @@ App.Models.PLine = Backbone.Model.extend({
         pPic: 'na'
     }
 });
-
+App.Models.Tabs = Backbone.Model.extend({
+    defaults: {
+        title: 'defaultView'
+    }
+});
 App.Models.DefaultView = Backbone.Model.extend({
     defaults: {
         title: 'defaultView'
@@ -62,6 +66,20 @@ App.Views.DefaultView = Backbone.View.extend({
 
     tagName: 'div',
 
+
+    initialize: function () {
+        this.model.on('change', this.render, this);
+    },
+
+    render: function () {
+        this.$el.html(this.template(this.model.toJSON()));
+        return this;
+    }
+});
+
+App.Views.Tabs = Backbone.View.extend({
+    template: _.template($("#tabsTemplate").html()),
+
     events: {
         'click .fourtab li': 'clicky'
 
@@ -73,8 +91,16 @@ App.Views.DefaultView = Backbone.View.extend({
 
     clicky: function (e) {
         e.preventDefault();
-        alert('click');
+        console.log(e);
+        console.log('click');
+        console.log($(this).className);
+        /*if(!this.hasClass('.activeTab')) {
+         $('.activeTab').removeClass('activeTab');
+         this.addClass('activeTab');
+
+         }*/
     },
+
 
     render: function () {
         this.$el.html(this.template(this.model.toJSON()));
@@ -91,16 +117,20 @@ App.Views.DefaultView = Backbone.View.extend({
 
 App.Views.App = Backbone.View.extend({
     initialize: function () {
+
         var pLineCollection = new App.Collections.PLineCollection;
-        pLineCollection.add({pLine: 'E-Line', pPic: 'css/img/eline.jpg'});
-        pLineCollection.add({pLine: 'Q-Line', pPic: 'css/img/qline.jpg'});
-        pLineCollection.add({pLine: 'V-Line', pPic: 'css/img/vline.jpg'});
-        pLineCollection.add({pLine: 'Videowall', pPic: 'css/img/vwall.jpg'});
-        pLineCollection.add({pLine: 'Multi-touch', pPic: 'css/img/mtouch.jpg'});
+        pLineCollection.add({pLine: 'E-Line Sorozat', pPic: 'css/img/eline.jpg'});
+        pLineCollection.add({pLine: 'Q-Line Sorozat', pPic: 'css/img/qline.jpg'});
+        pLineCollection.add({pLine: 'V-Line Sorozat', pPic: 'css/img/vline.jpg'});
+        pLineCollection.add({pLine: 'Videófal Sorozat', pPic: 'css/img/vwall.jpg'});
+        pLineCollection.add({pLine: 'Multi-touch Sorozat', pPic: 'css/img/mtouch.jpg'});
         var pLineCollectionView = new App.Views.PLineCollectionView({collection: pLineCollection}).render();
+        var tabs = new App.Models.Tabs();
         var defo = new App.Models.DefaultView();
+        var tabsView = new App.Views.Tabs({model: tabs}).render();
         var defoView = new App.Views.DefaultView({model: defo}).render();
         $('.productLineSelector').append(pLineCollectionView.$el);
+        $('.defoView').append(tabsView.el);
         $('.defoView').append(defoView.el);
     }
 

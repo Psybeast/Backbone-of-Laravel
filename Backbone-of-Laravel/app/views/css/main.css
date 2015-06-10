@@ -1,6 +1,12 @@
 body {
     background: #f0f0f0;
     margin: 0;
+    font-size: 10px;
+    font-family: "Helvetica Neue", Helvetica, Lato, sans-serif;
+}
+
+h1 {
+    font-weight: normal;
 }
 
 /* HEADER */
@@ -27,6 +33,11 @@ body {
     padding: 28px;
 }
 
+/* ----content---- */
+.defoView {
+    max-width: 970px;
+    margin: 15px auto;
+}
 /* ---------------------------*/
 .productLineSelector {
     position: relative;
@@ -65,43 +76,10 @@ body {
 .pLineName {
     margin: 0 0 10px 0;
     text-align: center;
+    font-size: 1.1em;
 }
 
-/*
-//Defoview Template CSS //
-.contentbg {
-    width: 970px;
-    height: 200px;
-    margin: 0 auto;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 5px 0 rgba(30, 30, 30, 0.1);
-    background: #fff;
+/***--------TABS View--------------***/
+#tabok {
+    /** TODO **/
 }
-
-.maintab {
-    width: 100%;
-    padding-left: 0;
-    margin-top: 15px;
-    list-style: none;
-    display: inline-block;
-}
-
-.maintab li {
-    display: inline-block;
-    width: 21.3%;
-    height: 40px;
-    border: 1px solid #ccc;
-    border-radius: 4px 4px 0 0;
-    background: #ececec;
-    text-align: center;
-    padding: 5px 15px;
-    color: #555;
-    line-height: 40px;
-}
-
-.maintab li.active {
-    background: #000;
-    color: #fff;
-}*/

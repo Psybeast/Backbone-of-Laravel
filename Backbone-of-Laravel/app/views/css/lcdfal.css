@@ -16,7 +16,7 @@
 
 /*-------------Tabs---------------------------------*/
 ul.fourtab {
-    width: 971px;
+    width: 100%;
     height: 65px;
     margin-top: 15px;
     margin-left: 1px;
@@ -24,16 +24,18 @@ ul.fourtab {
 }
 
 ul.fourtab li {
+    list-style: none;
     float: left;
     width: 241px;
     margin-right: 1px;
     text-align: center;
     color: rgb(38, 38, 38);
-    font-size: 11px;
+    font-size: 1.5em;
     font-style: normal;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 51px;
-    background: #ECECEC;
+    letter-spacing: 0.05em;
+    background: #fff;
 
     -webkit-border-top-left-radius: 10px;
     -webkit-border-top-right-radius: 10px;
@@ -50,6 +52,7 @@ ul.fourtab li#tab_4 {
 
 ul.fourtab li a:link {
     color: rgb(38, 38, 38);
+    text-decoration: none;
 }
 
 ul.fourtab li a:visited {
@@ -104,11 +107,7 @@ ul.fourtab li a:visited {
     text-align: center;
     /*padding-top: 40px;*/
     -moz-opacity: 0.8;
-    -khtml-opacity: 0.8;
     opacity: 0.8;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=80);
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80);
-    filter: alpha(opacity=80);
 }
 
 #t1introtitle, #t1signagetitle {

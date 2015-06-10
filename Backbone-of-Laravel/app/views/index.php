@@ -21,17 +21,22 @@
     <img src="<%= pPic %>"/>
     <p class="pLineName"><%= pLine %></p>
 </script>
+<!--Main page tabs template-->
+<script type="text/template" id="tabsTemplate">
+    <div id="tabok" style="height:65px; width: 100%;">
+        <ul class="fourtab">
+            <li class="activeTab" id="tab_1"><a href="1400">Áttekintés</a></li>
+            <li id="tab_2"><a href="1100">Termékcsalád</a></li>
+            <li id="tab_3"><a href="1617">Signage megoldások</a></li>
+            <li id="tab_4"><a href="570">Elérhetőségek</a></li>
+        </ul>
+    </div>
+</script>
 
 <script type="text/template" id="defoTemplate">
     <div class="contentbg">
-        <!--   <ul class="maintab nav nav-tabs">
-               <li class="active">Áttekintés</li>
-               <li>Termékcsalád</li>
-               <li>Signage megoldások</li>
-               <li>Elérhetőségek</li>
-           </ul>
-        -->
         <!-- TABS -->
+        <!--
         <div id="tabok" style="height:65px; width: 100%;">
             <ul class="fourtab">
                 <li class="activeTab" id="tab_1"><a href="1400">Áttekintés</a></li>
@@ -40,6 +45,9 @@
                 <li id="tab_4"><a href="570">Elérhetőségek</a></li>
             </ul>
         </div>
+        -->
+
+
         <!-- ÁTTEKINTÉS TAB -->
         <div id="tab_1" class="tabs" style="">
             <div id="tab1Header" class="tabfej">
@@ -101,7 +109,7 @@
                         nyújthatnak
                         Önnek a Philips signage megoldások.</p>
                     <img id="t1signageimg" src="css/img/solution-img.png"/>
-                </div>
+        </div>
             </div>
         </div>
         <!-- TERMÉKCSALÁD TAB -->
@@ -176,17 +184,17 @@
                                 <li class="detailli">40%-kal kevesebb energiafelhasználás a CCFL technológiához képest
                                 </li>
                                 <li class="detailli">50 000 óra várható panel-élettartam (MTBF)</li>
-                            </ul>
-                        </div>
+                    </ul>
+                </div>
                         <div class="detail_right_bot">
                         </div>
-                    </div>
+            </div>
                 </div>
                 <div class="detailtab" id="detailtab2" style="z-index:355;">
                     <div class="odddetailtab_black" id="tab2black">
                         <div class="odddetail_left_top">
                             <img class="detailimg" id="detailtab2pic" src="css/img/eline_series.png"/>
-                        </div>
+                </div>
                         <div class="odddetail_right_top">
                             <h1 class="detailh1">E-line. Professzionális signage megoldások</h1>
 
@@ -200,7 +208,7 @@
                                 E-line
                                 segítségével csökkentheti a teljes tulajdonlási költségét (TCO), és növelheti az
                                 üzleti eredményeit (ROI).</p>
-                        </div>
+                </div>
                     </div>
                     <div class="odddetailtab_white" id="tab2white">
                         <div class="odddetail_left_bot">
@@ -232,7 +240,7 @@
                                 vékony, kis súlyú kialakítás ideális megoldás lehet a közlekedési és vállalati
                                 környezetekben a
                                 hatékony és professzionális üzenetközvetítés érdekében.</p>
-                        </div>
+                </div>
                         <div class="detail_right_top">
                             <img class="detailimg" id="detailtab3pic" src="css/img/vline_series.png"/>
                         </div>
@@ -272,7 +280,7 @@
                                 nélküli 3D és multi-user touch videofal megoldások terén a Philips technológiai úttörő
                                 szerepet
                                 játszik.</p>
-                        </div>
+                </div>
                         <div class="detail_right_top">
                             <img class="detailimg" id="detailtab4pic" src="css/img/videowall_seriespic.png"/>
                         </div>
@@ -312,7 +320,7 @@
                                 sokkal élvezetesebb élményt nyújt a szemlélők számára a múzeumokban, kiemelt központi
                                 üzletekben
                                 és értékesítési reklámkörnyezetekben.</p>
-                        </div>
+                </div>
                     </div>
                     <div class="odddetailtab_white" id="tab5white">
                         <div class="odddetail_left_bot">
@@ -351,11 +359,11 @@
                                 vagy 32 egyidejű érintőpont közül választhat, így új szintre emelheti a célközönséggel
                                 való
                                 interakciót.</p>
-                        </div>
+                </div>
                         <div class="detail_right_top">
                             <img class="detailimg" id="detailtab6pic" src="css/img/multitouch.png"/>
                         </div>
-                    </div>
+            </div>
                     <div class="detailtab_white" id="tab6white">
                         <div class="detail_left_bot">
                             <h3 class="detailh3">Fő funkciók</h3>
@@ -375,7 +383,7 @@
                         <div class="detail_right_bot">
                         </div>
                     </div>
-                </div>
+        </div>
             </div>
         </div>
         <div id="tab_3" class="tabs" style="display:none;">
@@ -450,8 +458,8 @@
                             mind az alapszintű, mind a közép- vagy csúcskategóriás médialejátszókkal kompatibilis, így
                             hosszú
                             távon hozzájárul a fenntartási költségek csökkentéséhez.</p>
-                    </div>
-                </div>
+            </div>
+        </div>
             </div>
         </div>
         <div id="tab_4" class="tabs" style="display:none;">
@@ -462,7 +470,7 @@
 
                 <p id="tab4headertext"> Vegye fel a kapcsolatot a Philips nyilvános signage helyi partnerével, vagy a
                     Philips képviselőjével.
-            </div>
+    </div>
             <div id="mapholder">
                 <iframe id="embedmap"
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2700.3924738652!2d18.917231299999997!3d47.404285400000006!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741e113c017a533%3A0xc63476fee76144ac!2sFac%C3%A9lia+utca+47!5e0!3m2!1shu!2s!4v1400579415066"
@@ -524,6 +532,7 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script src="js/underscore-min.js"></script>
 <script src="js/backbone-min.js"></script>
+<script src="js/templates.js"></script>
 <script src="js/main.js"></script>
 <script src="js/code.js"></script>
 <script src="js/cufon-yui.js" type="text/javascript"></script>
@@ -534,6 +543,27 @@
     Cufon.replace('h1,h3');
     Cufon.replace('h3');
     Cufon.replace('th');
+    /*  Cufon.replace('a');*/
+
+    $(document).ready(function () {
+        //TABOK Váltása
+        $('ul.fourtab li').click(function (e) {
+            e.preventDefault();
+            if ($(this).not('.activeTab')) {
+                var selected = $(this);
+                var selectedID = selected.attr('id');
+                var aktivID = $('li.activeTab').attr('id');
+                $('div#' + aktivID).fadeOut(100);
+                $('li.activeTab').removeClass('activeTab');
+                $(selected).addClass('activeTab');
+
+                var tabHeight = $(selected).find('a').attr('href');
+                $('div.contentbg').css('height', tabHeight);
+                $('div#' + selectedID).fadeIn(500);
+            } else {         //ha aktív ne csinálj semmit
+            }
+        });
+    });
 </script>
 </body>
 </html>
